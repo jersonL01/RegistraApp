@@ -40,7 +40,7 @@ Asegúrate de tener instalados:
 1. Abre tu terminal o línea de comandos.  
 2. Ejecuta el siguiente comando:  
    ```bash
-   git clone https://github.com/usuario/repositorio.git
+   git clone https://github.com/jersonL01/RegistraApp.git
 3. Acceder al directorio del proyecto:
      ```bash
      cd RegistraApp
