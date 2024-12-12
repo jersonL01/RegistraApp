@@ -1,0 +1,24 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin-dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lista de Cursos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list class="cursos-list">
+    <ion-item *ngFor="let aux of cursos" class="curso-item">
+      <ion-label class="curso-label">
+        <img [src]="aux.imagenURL" *ngIf="aux.imagenURL" alt="Imagen del curso" class="curso-image" />
+        <h2 class="curso-name">{{ aux.nombre }}</h2>
+        <p class="curso-section">Sección: {{ aux.seccion }}</p>
+      </ion-label>
+      <!-- Contenedor para los botones -->
+      <ion-buttons class="curso-buttons" slot="end">
+        <ion-button color="success"  (click)="editarCursos(aux.uid)">Modificar</ion-button>
+        <ion-button color="danger" (click)="eliminarCurso(aux.uid)">Eliminar</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

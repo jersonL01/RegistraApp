@@ -1,0 +1,22 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/alumno-dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mi Curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngIf="curso">
+    <ion-card-header>
+      <ion-card-title>{{ curso.nombre }}</ion-card-title>
+      <ion-card-subtitle>{{ curso.seccion }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Profesor:</strong> {{ profesor?.nombre }}</p>
+      <p><strong>Email:</strong> {{ profesor?.email }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

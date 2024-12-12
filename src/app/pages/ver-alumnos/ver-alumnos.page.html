@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cursos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alumnos del Curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let alumno of alumnos">
+      <ion-avatar slot="start">
+        <img [src]="alumno.imagen || 'assets/default-avatar.png'" alt="Avatar">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ alumno.nombre }}</h2>
+        <p>{{ alumno.email }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

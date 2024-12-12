@@ -1,0 +1,41 @@
+.content-background {
+    --background: #f4f5f8;
+  }
+  
+  ion-card {
+    --border-radius: 12px;
+    margin: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  ion-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .txt {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  .green-button {
+    --background: #28a745;
+    --background-hover: #218838;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  
+  .danger-button {
+    --background: #dc3545;
+    --background-hover: #c82333;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  
+  ion-button ion-icon {
+    margin-right: 5px;
+    font-size: 1.2rem;
+  }
+  

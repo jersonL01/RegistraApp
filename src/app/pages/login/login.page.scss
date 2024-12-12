@@ -1,0 +1,108 @@
+.contenido {
+  --background: #f7f2f2fb; /* Color de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 20px; 
+  
+}
+
+.card {
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto; /* Margen superior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.852);
+  border-radius: 12px;
+  background:whitesmoke;
+  
+  
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0b1787;
+  text-align: center;
+}
+
+.titulo1 {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+
+
+
+.txtemail{
+  margin-bottom: 10px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  color: black;
+  font-size: 16px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.852);
+  border-radius: 8px;
+  
+}
+.txtpass{
+  margin-top: 12px;
+  --border-radius: 8px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.397);
+  border-radius: 8px;
+}
+
+
+.btnlogin {
+  
+  --color: white;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 6px rgba(10, 9, 9, 0.989);
+  --font-weight: bold;
+  --font-size: 18px;
+  --background: linear-gradient(45deg, #09dfd4,  #0b1787); /* Cambia este valor para ajustar el color */
+}
+
+
+
+.enlace {
+  display: flex;
+  flex-direction: column; /* Coloca los enlaces en columnas */
+  align-items: center; /* Centra los enlaces horizontalmente */
+  margin-top: 20px;
+}
+
+.enlace a {
+  color:#0b1787;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Añade transición para color y transformación */
+  margin: 5px;
+}
+
+.enlace a:hover {
+  color: #1c1c1c; /* Cambia el color al pasar el mouse */
+  transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}
+.container-rss {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.container-rss button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container-rss img {
+  width: 30px;
+  height: 30px;
+}

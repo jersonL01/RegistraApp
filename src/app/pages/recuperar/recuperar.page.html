@@ -1,0 +1,37 @@
+<ion-header> </ion-header>
+
+<ion-content class="contenido">
+  <div class="container">
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-title color="primary">Restablecer Contraseña</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form (submit)="RecuperarPass()">
+          <ion-item>
+            <ion-label color="primary" position="floating"
+              >Nombre de Usuario</ion-label
+            >
+            <ion-input
+              type="email"
+              name="email"
+              [(ngModel)]="email"
+            ></ion-input>
+          </ion-item>
+
+          <ion-button class="btn" expand="block" type="sumbit"
+            >Recuperar</ion-button
+          >
+          <a
+            class="enlace"
+            [routerLink]="['/login']"
+            routerLinkActive="router-link-active"
+          >
+            Volver a Iniciar Sesión
+          </a>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

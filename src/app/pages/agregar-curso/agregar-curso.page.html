@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin-dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar Cursos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+  <div class="form-container">
+    <ion-card class="form-style">
+      <ion-card-header>
+        <ion-card-title class="form-title">Crear Nuevo Curso</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Campo para el nombre del curso -->
+        <ion-item class="input-item compact-input">
+          <ion-label position="floating">Nombre del Curso</ion-label>
+          <ion-input type="text" [(ngModel)]="nombreCurso"></ion-input>
+        </ion-item>
+
+        <!-- Campo para la sección del curso -->
+        <ion-item class="input-item compact-input">
+          <ion-label position="floating">Sección</ion-label>
+          <ion-input type="text" [(ngModel)]="seccion"></ion-input>
+        </ion-item>
+
+        <!-- Selector para imagen del curso -->
+        <ion-item class="input-item compact-input">
+          <ion-label position="stacked">Imagen</ion-label>
+          <ion-input type="file" (change)="onFileSelected($event)"></ion-input>
+        </ion-item>
+
+        <!-- Selector para los alumnos -->
+        <ion-item class="input-item compact-input">
+          <ion-label>Alumnos</ion-label>
+          <ion-select multiple="true" [(ngModel)]="selectedAlumnos">
+            <ion-select-option *ngFor="let alumno of alumnos" [value]="alumno.uid">
+              {{ alumno.nombre }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Botón para agregar curso -->
+        <ion-button expand="block" class="submit-button" (click)="agregarCurso()">
+          <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+          Agregar Curso
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

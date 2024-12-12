@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin-dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfiles de Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let usuario of usuarios">
+      <ion-avatar slot="start">
+        <img [src]="usuario.imagen" alt="Imagen de {{ usuario.nombre }}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ usuario.nombre }} </h2>
+        <p>Email: {{ usuario.email }}</p>
+        <p>Tipo: {{ usuario.tipo }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+  
+</ion-header>
+
+
+<ion-content class="contenido">
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="titulo">Bienvenido</ion-card-title>
+      <ion-card-subtitle class="titulo1">RegistraApp</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content [formGroup]="loginForm">
+
+      <ion-input  [(ngModel)]="emailValue" formControlName="email"class="txtemail"  label="Correo" label-placement="floating" fill="outline" placeholder="Ingrese Email" >
+        <ion-icon  name="person" slot="end"></ion-icon>
+      </ion-input>
+      <ion-text position="stacked" color="danger" *ngIf="loginForm.get('email')?.hasError('required')" >El Email es requerido</ion-text>
+      
+      <ion-input  [(ngModel)]="passValue" formControlName="password" class="txtpass" label="Contraseña" label-placement="floating"  fill="outline" placeholder="Ingresar Contraseña" click="password">
+        <ion-input-password-toggle  slot="end"></ion-input-password-toggle>
+      </ion-input>
+      <ion-text position="stacked" color="danger" *ngIf="loginForm.get('password')?.hasError('required')">La Contraseña es requerida</ion-text>
+
+      <ion-button (click)="login()" class="btnlogin" expand="block"  id="open-loading">Iniciar Sesión</ion-button>
+    
+      <div class="enlace">
+        <a [routerLink]="['/register']" routerLinkActive="router-link-active" class="cuenta">
+          Crear cuenta
+        </a>
+        <a [routerLink]="['/recuperar']" routerLinkActive="router-link-active" class="contraseña" >
+          ¿Olvidaste tu contraseña?
+        </a>
+      </div>
+      
+    </ion-card-content>
+
+    
+    <div class="container-rss">
+      <button class="github">
+        <img src="assets/img/github_logo.png" (click)="loginWithGitHub()" alt="GitHub Logo" height="30" width="30">
+      </button>
+     <button class="google">
+      <img src="assets/img/google.png" (click)="loginGoogle()" alt="" height="30" width="30">
+     </button>
+    </div>
+
+
+  </ion-card>
+
+  
+  
+</ion-content>

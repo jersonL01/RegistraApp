@@ -1,0 +1,56 @@
+.contenido{
+    --background: white;
+
+}
+
+.card{
+    width: 90%;
+    max-width: 400px;
+    margin: 200px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.995);
+    border-radius: 12px;
+    background:whitesmoke;
+    
+}
+.input{
+    color: black;
+    font-size: 16px;
+}
+
+.btn{
+    margin: 10px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    --background: linear-gradient(45deg, #09dfd4,  #0b1787);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 10px auto;
+}
+
+.btn:hover{
+    --background: rgb(20, 199, 208);
+    color: white;
+    
+}
+
+.enlace{
+    color: #0b1787;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 10px auto;
+}
+
+.enlace:hover{
+    color: black;
+    transform: scale(1.1); 
+}   
+

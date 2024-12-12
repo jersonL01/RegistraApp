@@ -1,0 +1,56 @@
+.cursos-list {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .curso-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #4a4b4d;
+  }
+  
+  .curso-label {
+    flex: 1;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar la imagen y la info */
+    align-items: flex-start; 
+    
+  }
+  
+  .curso-image {
+    max-width: 100px; /* Ajusta el tamaño de la imagen */
+    max-height: 80px; /* Ajusta la altura de la imagen */
+    border-radius: 5px;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    margin-bottom: 5px; /* Espacio entre la imagen y la info */
+  }
+  
+  .curso-info {
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: space-between; /* Espacio entre nombre y sección */
+    width: 100%; /* Tomar todo el ancho disponible */
+  }
+  
+  .curso-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0; /* Elimina márgenes */
+  }
+  
+  .curso-section {
+    color: #666;
+    margin: 0; /* Elimina márgenes */
+  }
+  
+  .curso-buttons {
+    display: flex;
+    flex-direction: column; /* Apila los botones en columna */
+    justify-content: space-between;
+    gap: 8px; /* Espacio entre los botones */
+   
+  }

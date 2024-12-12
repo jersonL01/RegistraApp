@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-background">
+  <ion-grid>
+    <ion-row>
+      <!-- Encabezado con un gradiente -->
+      <ion-col size="12">
+        <div class="dashboard-header">
+          <h1>Bienvenido al Panel</h1>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <!-- Tarjeta: Gestión de Usuarios -->
+      <ion-col size="12" size-md="6" size-lg="4">
+        <ion-card class="card-gradient">
+          <ion-card-header>
+            <ion-card-title class="txt">Gestión de Usuarios</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" class="blue-button" [routerLink]="['/ver-usuarios']">
+              <ion-icon slot="start" name="people-outline"></ion-icon>
+              Ver Usuarios
+            </ion-button>
+            <ion-button expand="block" class="blue-button" [routerLink]="['/perfiles']">
+              <ion-icon slot="start" name="people-outline"></ion-icon>
+              API de Usuarios
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- Tarjeta: Gestión de Clases -->
+      <ion-col size="12" size-md="6" size-lg="4">
+        <ion-card class="card-gradient">
+          <ion-card-header>
+            <ion-card-title class="txt">Gestión de Clases</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" class="blue-button" [routerLink]="['/agregar-curso']">
+              <ion-icon slot="start" name="book-outline"></ion-icon>
+              Agregar Cursos
+            </ion-button>
+            <ion-button expand="block" class="blue-button" [routerLink]="['/lista-cursos']">
+              <ion-icon slot="start" name="book-outline"></ion-icon>
+              Lista de Clases
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- Tarjeta: Estadísticas -->
+      <ion-col size="12" size-md="6" size-lg="4">
+        <ion-card class="card-gradient">
+          <ion-card-header>
+            <ion-card-title class="txt">Estadísticas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" class="blue-button" [routerLink]="['/estadisticas']">
+              <ion-icon slot="start" name="bar-chart-outline"></ion-icon>
+              Ver Estadísticas
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

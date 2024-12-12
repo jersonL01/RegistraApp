@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/gestion"></ion-back-button>
+    </ion-buttons>
+    <ion-title>asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let aux of asistencia">
+      <ion-avatar slot="start">
+        <img src="{{ aux.imagen }}" alt="Avatar de {{ aux.nombre }}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ aux.nombre }} {{ aux.apellido }}</h2>
+        <p>Porcentaje: {{ aux.porcentaje }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

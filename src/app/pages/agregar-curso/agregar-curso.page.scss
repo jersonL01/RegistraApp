@@ -1,0 +1,79 @@
+/* Evitar el scroll */
+.no-scroll {
+  overflow: hidden !important;
+}
+
+/* Fondo del contenido */
+ion-content {
+  --background: linear-gradient(to bottom, #ffffff, #f0f9ff);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;  /* Asegura que ocupe toda la pantalla */
+  padding: 20px;
+  box-sizing: border-box; /* Incluir padding en el cálculo de altura */
+  overflow: hidden;
+}
+
+/* Tarjeta del formulario */
+.form-style {
+  width: 100%;
+  max-width: 380px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  height: auto;  /* Evitar que la tarjeta se extienda demasiado */
+}
+
+/* Título del formulario */
+.form-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #003b7a;
+}
+
+/* Estilo compacto de inputs */
+.input-item {
+  --min-height: 40px; /* Reducir altura del input */
+  font-size: 0.9rem; /* Reducir tamaño de fuente */
+  margin-bottom: 12px; /* Espaciado reducido */
+}
+
+.compact-input ion-label {
+  font-size: 0.8rem; /* Fuente más pequeña para las etiquetas */
+}
+
+.compact-input ion-input {
+  font-size: 0.9rem; /* Fuente más pequeña para el texto ingresado */
+}
+
+/* Botón */
+.submit-button {
+  --background: #007bff;
+  --background-activated: #0056b3;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+
+.submit-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}

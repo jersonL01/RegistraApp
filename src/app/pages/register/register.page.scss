@@ -1,0 +1,78 @@
+.contenido {
+  --background: #f7f2f2fb; /* Color de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  padding-top: 30px; /* Ajusta este valor según sea necesario */
+  overflow: hidden; 
+}
+
+.card {
+  width: 90%;
+  max-width: 400px;
+  margin-top: 50px; /* Añade margen superior */
+  box-shadow: 0 4px 8px rgb(9, 8, 8); /* Ajusta la sombra para que sea menos intensa */
+  border-radius: 12px;
+  background: whitesmoke;
+  padding: 20px; /* Añade padding interno */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0b1787;
+  text-align: center;
+}
+
+.titulo1 {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+.txtemail, .txtpass {
+  margin-bottom: 10px; /* Reduce el margen inferior */
+  --border-radius: 8px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  color: black;
+  font-size: 16px;
+}
+
+ion-text{
+  font-size: 12px;
+}
+
+.btnlogin {
+  margin-bottom: 10px;
+  --color: white;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 6px rgba(3, 3, 3, 0.989);
+  --font-weight: bold;
+  --font-size: 18px;
+  --background: linear-gradient(45deg, #09dfd4,  #0b1787);  /* Cambia este valor para ajustar el color */
+}
+
+
+
+.enlace {
+  display: flex;
+  flex-direction: column; /* Coloca los enlaces en columnas */
+  align-items: center; /* Centra los enlaces horizontalmente */
+  margin-top: 15px;
+}
+
+.enlace a {
+  color: #0b1787;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Añade transición para color y transformación */
+ 
+}
+
+.enlace a:hover {
+  color: #1c1c1c; /* Cambia el color al pasar el mouse */
+  transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}

@@ -1,0 +1,20 @@
+.curso-thumbnail {
+  width: 100%;
+  height: auto;
+  max-width: 80px; /* Ajusta el tamaño de la imagen */
+  object-fit: cover; /* Mantiene la proporción sin distorsionar */
+}
+
+.curso-img-col {
+  display: flex;
+  justify-content: center; /* Centra la imagen vertical y horizontalmente */
+  align-items: center;
+}
+
+.curso-info-col {
+  padding-left: 10px; /* Añade espacio entre la imagen y el texto */
+}
+
+.curso-card {
+  margin: 10px 0;
+}

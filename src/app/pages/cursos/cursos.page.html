@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profesor-dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cursos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Lista de cursos -->
+  <ion-grid *ngIf="cursos.length > 0; else noCursos">
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let curso of cursos">
+        <ion-card class="curso-card">
+          <ion-card-header>
+            <ion-row>
+              <!-- Imagen del curso (izquierda) -->
+              <ion-col size="4" class="curso-img-col">
+                <ion-img [src]="curso.imagenURL" alt="{{ curso.nombre }}" class="curso-thumbnail"></ion-img>
+              </ion-col>
+
+              <!-- Nombre y sección del curso (derecha) -->
+              <ion-col size="8" class="curso-info-col">
+                <ion-card-title>
+                  <h2>{{ curso.nombre }}</h2>
+                  <p>{{ curso.seccion }}</p>
+                </ion-card-title>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+
+          <ion-card-content>
+            <!-- Botones para cada curso -->
+            <ion-buttons slot="end">
+              <!-- Botón para generar código QR -->
+              <ion-button color="primary" [routerLink]="['/qr']" >
+                <ion-label>Generar QR</ion-label>
+              </ion-button>
+
+              <!-- Botón para ver alumnos y redirigir al page 'ver-alumnos' -->
+              <ion-button color="secondary" (click)="verAlumnos(curso.id)">
+                <ion-label>Ver Alumnos</ion-label>
+              </ion-button>
+            
+            </ion-buttons>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Mensaje si no hay cursos -->
+  <ng-template #noCursos>
+    <ion-item>
+      <ion-label>No tienes cursos asignados.</ion-label>
+    </ion-item>
+  </ng-template>
+</ion-content>

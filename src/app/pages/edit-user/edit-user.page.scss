@@ -1,0 +1,33 @@
+.edit-user-content {
+    --ion-background-color: #f4f4f4; /* Fondo del contenido fuera de la tarjeta */
+    padding: 16px;
+  }
+  
+  .edit-user-card {
+    background-color: white; /* Fondo blanco para la tarjeta */
+    border: 1px solid #0000007b; /* Bordes oscuros */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0); /* Sombra para el card */
+  }
+  
+  ion-label, ion-input, ion-select {
+    color: white; /* Texto en negro */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centrar el botón */
+    align-items: center;
+    padding: 15px;
+  }
+  
+  ion-button {
+    width: 100%; 
+    max-width: 200px;
+    color: white;
+  }
+
+  
+.input{
+    color: white;
+}

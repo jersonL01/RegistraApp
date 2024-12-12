@@ -1,0 +1,103 @@
+/* Evitar el scroll */
+.no-scroll {
+    overflow: hidden !important;
+  }
+  
+  /* Fondo del contenido */
+  ion-content {
+    --background: linear-gradient(to bottom, #ffffff, #f0f9ff);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Contenedor principal del formulario */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;  /* Asegura que ocupe toda la pantalla */
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color : #007bff;
+ 
+  }
+  
+  /* Estilo de los ítems del formulario */
+  .input-item {
+    --min-height: 40px;  /* Reducir altura */
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  .input-item ion-label {
+    font-size: 0.8rem;  /* Etiqueta más pequeña */
+  }
+  
+  .input-item ion-input,
+  .input-item ion-select {
+    font-size: 0.9rem;
+  }
+  
+  /* Estilo de los botones */
+  .submit-button {
+    --background: #007bff;
+    --background-activated: #0056b3;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Hover y animaciones del botón */
+  .submit-button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  .submit-button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Estilo para el formulario */
+  form {
+    width: 100%;
+    max-width: 380px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  /* Animación de entrada de los ítems */
+  ion-item {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  ion-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  ion-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  ion-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  ion-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  

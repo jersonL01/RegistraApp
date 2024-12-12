@@ -1,0 +1,38 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="contenido">
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="titulo">Bienvenido</ion-card-title>
+      <ion-card-subtitle class="titulo1">Registrate</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content [formGroup]="registerForm">
+      <ion-input [(ngModel)]="userValue" formControlName="user" class="txtemail" label="Usuario" label-placement="floating" fill="outline" placeholder="Nombre de Usuario">
+        <ion-icon name="person" slot="end"></ion-icon>
+      </ion-input>
+      <ion-text color="danger" *ngIf="registerForm.get('user')?.hasError('required')">Nombre de Usuario requerido!</ion-text>
+
+      <ion-input [(ngModel)]="emailValue" formControlName="email" class="txtemail" label="Correo Electronico" label-placement="floating" fill="outline" placeholder="Correo Electronico">
+        <ion-icon name="mail-outline" slot="end"></ion-icon>
+      </ion-input>
+      <ion-text color="danger" *ngIf="registerForm.get('email')?.hasError('required')">El Email es invalido</ion-text>
+
+      <ion-input [(ngModel)]="passValue" formControlName="password" class="txtpass" label="Contraseña" label-placement="floating" fill="outline" placeholder="Ingresar Contraseña">
+        <ion-input-password-toggle color="success" slot="end"></ion-input-password-toggle>
+      </ion-input>
+      <ion-text   color="danger" *ngIf="registerForm.get('password')?.hasError('required')">Debe tener como minimo 6 caracteres</ion-text>
+
+      <ion-button class="btnlogin" (click)="register()" expand="block">Registrarse</ion-button>
+      <ion-button (click)="crearUsuarios()" expand="block" fill="outline">Crear Usuarios</ion-button>
+      
+
+      <div class="enlace">
+        <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="cuenta">
+          Volver a Iniciar Sesión
+        </a>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/alumno-dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Escanear QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="button-container">
+    <ion-tab-button class="scan-button" (click)="openCamra()">
+      <p *ngIf="resultadoQR">Resultado del escaneo: {{ resultadoQR }}</p>
+      <ion-icon slot="start" name="camera"></ion-icon>
+      Escanear QR
+    </ion-tab-button>
+  </div>
+</ion-content>

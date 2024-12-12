@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lista-cursos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Modificar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+  <div class="form-container">
+    <form (ngSubmit)="modificarCurso()">
+      <h4 class="form-container">Modificar Curso</h4>
+      <ion-item class="input-item">
+        <ion-label position="floating">Nombre del Curso</ion-label>
+        <ion-input type="text" [(ngModel)]="nombreCurso" name="nombreCurso" required></ion-input>
+      </ion-item>
+
+      <!-- Campo para la sección -->
+      <ion-item class="input-item">
+        <ion-label position="floating">Sección</ion-label>
+        <ion-input type="text" [(ngModel)]="seccion" name="seccion" required></ion-input>
+      </ion-item>
+
+      <!-- Selector de imagen -->
+      <ion-item class="input-item">
+        <ion-label>Imagen</ion-label>
+        <input type="file" (change)="onFileSelected($event)" accept="image/*"/>
+      </ion-item>
+
+      <!-- Selector de alumnos -->
+      <ion-item class="input-item">
+        <ion-label>Seleccionar Alumnos</ion-label>
+        <ion-select [(ngModel)]="alumnosSeleccionados" name="alumnosSeleccionados" multiple="true">
+          <ion-select-option *ngFor="let alumno of alumnos" [value]="alumno.uid">
+            {{ alumno.nombre }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Botón para guardar cambios -->
+      <ion-button expand="full" type="submit" class="submit-button">
+        Guardar Cambios
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
